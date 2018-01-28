@@ -45,8 +45,9 @@ class CartPoleEnv(gym.Env):
 
         self._seed()
         self.viewer = None
-        self.state = None
-
+        #self.state = None
+        theta_0 = 0
+        self.state = [None, None, theta_0*math.pi/360, None]
         self.steps_beyond_done = None
 
     def _seed(self, seed=None):
